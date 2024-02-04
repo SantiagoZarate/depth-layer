@@ -24,10 +24,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite --host",
-    "build": "parcel build",
+    "build": "npx tsc",
     "watch": "parcel watch",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
     "prepare": "npm run build",
     "version": "git add .",
     "postversion": "git push && git push --tags"
