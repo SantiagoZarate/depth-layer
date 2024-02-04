@@ -32,7 +32,7 @@ export default [
     ],
   },
   {
-    input: 'dist/cjs/types/src/index.d.ts',
+    input: 'dist/types/src/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     plugins: [dts.default()],
     external: [/\.css$/],
