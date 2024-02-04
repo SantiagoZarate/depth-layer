@@ -1,0 +1,51 @@
+{
+  "name": "depth-layer",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "react component to add depth looking style to your own components",
+  "main": "dist/index.jsx",
+  "css": "dist/main.css",
+  "source": "src/index.ts",
+  "module": "dist/module.js",
+  "types": "dist/types.d.ts",
+  "author": {
+    "name": "Santiago Zarate",
+    "email": "santiago2001zarate@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "directory": "https://github.com/SantiagoZarate/depth-layer.git"
+  },
+  "keywords": [
+    "React",
+    "Component",
+    "Depth Layer",
+    "Tailwindcss",
+    "Typescript"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "parcel build",
+    "watch": "parcel watch",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "prepare": "npm run build",
+    "version": "git add .",
+    "postversion": "git push && git push --tags"
+  },
+  "dependencies": {
+    "class-variance-authority": "0.7.0",
+    "react": "^18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.52",
+    "@types/react-dom": "18.2.18",
+    "autoprefixer": "10.4.17",
+    "postcss": "8.4.33",
+    "tailwindcss": "3.4.1",
+    "typescript": "5.3.3"
+  }
+}
