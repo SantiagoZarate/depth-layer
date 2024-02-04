@@ -28,8 +28,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite --host",
-    "build": "npx tsc",
-    "rollup": "rollup -c --bundleConfigAsCjs",
+    "build": "rollup -c --bundleConfigAsCjs",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "prepare": "npm run build",
     "version": "git add .",
