@@ -4,11 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "description": "react component to add depth looking style to your own components",
-  "main": "dist/index.jsx",
-  "css": "dist/main.css",
+  "main": "dist/index.js",
   "source": "src/index.ts",
-  "module": "dist/module.js",
-  "types": "dist/types.d.ts",
   "author": {
     "name": "Santiago Zarate",
     "email": "santiago2001zarate@gmail.com"
