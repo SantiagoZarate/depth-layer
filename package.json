@@ -6,7 +6,7 @@
   "description": "react component to add depth looking style to your own components",
   "main": "dist/index.js",
   "source": "src/index.tsx",
-  "types": "dist/types.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
