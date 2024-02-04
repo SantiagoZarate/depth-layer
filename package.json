@@ -6,6 +6,7 @@
   "description": "react component to add depth looking style to your own components",
   "main": "dist/index.js",
   "source": "src/index.tsx",
+  "types": "src/types.ts",
   "author": {
     "name": "Santiago Zarate",
     "email": "santiago2001zarate@gmail.com"
