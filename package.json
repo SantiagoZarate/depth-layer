@@ -1,11 +1,11 @@
 {
-  "name": "depth-layer",
+  "name": "depth-decorator",
   "private": false,
   "version": "0.0.0",
   "type": "module",
   "description": "react component to add depth looking style to your own components",
   "main": "dist/index.js",
-  "source": "src/index.ts",
+  "source": "src/index.tsx",
   "author": {
     "name": "Santiago Zarate",
     "email": "santiago2001zarate@gmail.com"
