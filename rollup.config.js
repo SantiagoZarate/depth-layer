@@ -7,6 +7,9 @@ import css from 'rollup-plugin-import-css'
 //NEW
 import terser from '@rollup/plugin-terser'
 import peerDepsExternal from 'rollup-plugin-peer-deps-external'
+import postcss from 'postcss'
+import tailwindcss from 'tailwindcss'
+import tailwindConfig from './tailwind.config.js'
 
 const packageJson = require('./package.json')
 
@@ -22,7 +25,9 @@ export default [
     ],
     plugins: [
       // NEW
-      typescript(),
+      typescript({
+        exclude: ["src/stories/"]
+      }),
       peerDepsExternal(),
 
       resolve(),
@@ -31,6 +36,17 @@ export default [
 
       // NEW
       terser(),
+      postcss({
+        config: {
+          path: './postcss.config.js'
+        },
+        extension: ['.css'],
+        minimize: true,
+        inject: {
+          insertAt: 'top'
+        },
+        plugins: [tailwindcss(tailwindConfig)]
+      })
     ],
   },
   {
