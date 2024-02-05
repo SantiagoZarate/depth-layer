@@ -1,4 +1,4 @@
-import type { ComponentStory, Meta, StoryFn, StoryObj } from '@storybook/react';
+import type { Meta, StoryFn, StoryObj } from '@storybook/react';
 import React from 'react';
 
 import { DepthLayer } from './index';
@@ -18,8 +18,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const Template: StoryFn<typeof DepthLayer> = (args) => (
-  <DepthLayer>
-    button
+  <DepthLayer {...args}>
+    <img
+      className='w-32 h-32 object-cover'
+      src="https://pics.craiyon.com/2023-07-19/372d10a1044941c0a471ac071b686a6a.webp"
+      alt="" />
   </DepthLayer>
 )
 
