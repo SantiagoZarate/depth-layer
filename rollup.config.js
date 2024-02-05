@@ -2,6 +2,7 @@ import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
 import dts from 'rollup-plugin-dts'
+import css from 'rollup-plugin-import-css'
 
 //NEW
 import terser from '@rollup/plugin-terser'
@@ -26,6 +27,7 @@ export default [
 
       resolve(),
       commonjs(),
+      css(),
 
       // NEW
       terser(),

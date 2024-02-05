@@ -1,0 +1,27 @@
+.depth-layer {
+  position: relative;
+}
+
+.depth-layer>span {
+  display: block;
+}
+
+.depth-layer>* {
+  border-radius: inherit;
+}
+
+.depth-layer::after,
+.depth-layer::before {
+  position: absolute;
+  border-radius: inherit;
+  pointer-events: none;
+  inset: 0px;
+}
+
+.depth-layer-default::after {
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.depth-layer-default::before {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
