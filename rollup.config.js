@@ -33,7 +33,6 @@ export default [
       resolve(),
       commonjs(),
       css(),
-
       // NEW
       terser(),
       postcss({

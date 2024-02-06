@@ -1,12 +1,12 @@
 {
   "name": "depth-decorator",
   "private": false,
-  "version": "0.0.9",
+  "version": "0.0.7",
   "type": "module",
   "description": "react component to add depth looking style to your own components",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "source": "src/index.tsx",
-  "types": "src/types.ts",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -30,6 +30,7 @@
     "dev": "vite --host",
     "build": "rollup -c --bundleConfigAsCjs",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "prepare": "npm run build",
     "version": "git add .",
     "postversion": "git push && git push --tags",
     "storybook": "storybook dev -p 6006",

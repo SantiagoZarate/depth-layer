@@ -11,6 +11,16 @@ const meta = {
   },
   tags: ['autodocs'],
   argTypes: {
+    hoverable: {
+      control: 'boolean'
+    },
+    clickable: {
+      control: 'boolean'
+    },
+    round: {
+      options: ['full', 'none'],
+      control: { type: 'radio' }
+    }
   },
 } satisfies Meta<typeof DepthLayer>;
 

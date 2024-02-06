@@ -1,6 +1,5 @@
-import { cva } from "class-variance-authority"
-import React from "react"
-import { DepthLayerProps } from "../types"
+import { cva, VariantProps } from "class-variance-authority"
+import React, { PropsWithChildren } from "react"
 
 export const depthLayerStyles = cva(
   `relative [&>span]:block [&>*]:rounded-[inherit]
@@ -89,7 +88,7 @@ export const depthLayerStyles = cva(
   }
 )
 
-// export type DepthLayerProps = PropsWithChildren & VariantProps<typeof depthLayerStyles>
+export type DepthLayerProps = PropsWithChildren & VariantProps<typeof depthLayerStyles>
 
 export function DepthLayer({ variant, children, round, elevation, hoverable, lightDirection, light, opacity, clickable, ...args }: DepthLayerProps) {
   return (
