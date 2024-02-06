@@ -3,27 +3,32 @@ import Layout from '../layouts/Layout.astro';
 import RigthArrowIcon from '../components/icons/RigthArrowIcon.astro';
 import GithubIcon from '../components/icons/GithubIcon.astro';
 import TerminalIcon from '../components/icons/TerminalIcon.astro'
+import Blob from '../components/Blob.astro'
+import ButtonLink from '../components/ButtonLink.astro';
 ---
 
 <Layout title="Welcome to Astro.">
   <header>
 
   </header>
+  <div class="absolute left-0 h-1/2 w-1/2 blur-[200px] opacity-50 pointer-events-none">
+    <Blob />
+  </div>
 	<main class="bg-red-900/10 max-w-screen-xl">
-		<section class="p-4 grid grid-cols-2 items-center min-h-screen">
+		<section class="p-4 relative grid grid-cols-2 items-center min-h-screen">
       <article class="bg-red-100/10 flex flex-col gap-4">
-        <h2 class="text-4xl font-black text-pretty">Enhance your component's <span>aesthetics</span> effortlessly with our React Depth Decorator</h2>
+        <h2 class="text-4xl font-black text-pretty">Enhance your component's aesthetics effortlessly with our
+          <span class="bg-gradient-to-r  from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text">React Depth Decorator</span>
+        </h2>
         <p class="text-xl">Unleash your creativity with variant-driven styling options</p>
         <footer class="flex flex-col gap-2">
           <div class="flex gap-2">
-            <button class="px-3 py-2 text-sm capitalize bg-zinc-800 flex gap-2 rounded-full items-center">
-              get started
-              <RigthArrowIcon />
-            </button>
-            <button class="px-3 py-2 text-sm capitalize bg-zinc-800 flex gap-2 rounded-full items-center">
-              github
-              <GithubIcon />
-            </button>
+          <ButtonLink ref='https://youtube.com' text='get started'>
+            <RigthArrowIcon />
+          </ButtonLink>
+          <ButtonLink ref='https://youtube.com' text='github'>
+            <GithubIcon />
+          </ButtonLink>
           </div>
           <span class="flex gap-1 items-center text-sm cursor-copy">
             <TerminalIcon /> npm install depth-decorator
