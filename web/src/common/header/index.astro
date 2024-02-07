@@ -1,0 +1,31 @@
+---
+import SunIcon from '../../components/icons/SunIcon.astro'
+import GithubIcon from '../../components/icons/GithubIcon.astro'
+import HeaderLink from './HeaderLink.astro'
+---
+
+<header class="w-full backdrop-blur-sm absolute border-b border-white/10 z-10">
+  <div class="w-full  mx-auto max-w-screen-xl px-4 py-2 flex justify-between items-center">
+    <div class="flex gap-1 flex-col">
+      <div class="flex gap-2 items-center">
+        <h1 class="capitalize">Depth Decorator</h1>
+        <span class="text-xs px-2 py-1 rounded-full bg-emerald-900">v1.0.0</span>
+      </div>
+        <span class="text-xs text-stone-400">tailored for modern React components</span>
+    </div>
+    <aside class="flex gap-2">
+      <nav class="flex gap-2 items-center">
+        <HeaderLink ref='https://youtube.com'>
+          <SunIcon />
+        </HeaderLink>
+        <HeaderLink ref='https://youtube.com'>
+          <GithubIcon />
+        </HeaderLink>
+      </nav>
+      <button class="bg-red-200 flex rounded-md gap-2 px-3 py-1 items-center">
+        <span class="capitalize">quick search...</span>
+        <span class="text-sm bg-red-800 rounded-md px-2 py-1">^K</span>
+      </button>
+    </aside>
+  </div>
+</header>
