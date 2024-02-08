@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import Blob from '../components/Blob.astro'
 import Header from '../common/header/index.astro'
 import Hero from '../components/Hero.astro';
+import CodeSnippet from '../components/CodeSnippet.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -17,7 +18,9 @@ import Hero from '../components/Hero.astro';
   <section class="border-b w-full bg-gradient-to-t from-purple-800/20 to-transparent to-65% border-white/10">
     <section class="p-8 grid grid-cols-2 bg-red-900/10 max-w-screen-xl mx-auto min-h-screen">
       <div class="bg-red-400"></div>
-      <div class="bg-red-300"></div>
+      <div class="bg-red-300 p-4">
+        <CodeSnippet lang="javascript" filename='./DepthLayer.tsx' code="const prueba = 'buenas chavales'"/>
+      </div>
     </section>
   </section>
   <section class="bg-red-900/10 border-b borde-white/10">
