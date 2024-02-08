@@ -7,14 +7,15 @@
     "strict": true,
     "skipLibCheck": true,
     "rootDir": ".",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "declaration": true,
     "declarationDir": "types",
     "sourceMap": true,
     "outDir": "dist",
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "jsxImportSource": "react"
   },
   "exclude": [
     "src/stories/"

@@ -1,4 +1,5 @@
 ---
+import '../styles/index.css'
 interface Props {
 	title: string;
 }
@@ -7,7 +8,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -16,9 +17,27 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="relative flex flex-col items-center text-stone-200">
+	<body class="relative bg-background flex flex-col items-center text-text-active">
 		<slot />
 	</body>
+  <script>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+  
+  // Whenever the user explicitly chooses light mode
+  localStorage.theme = 'light'
+  
+  // Whenever the user explicitly chooses dark mode
+  localStorage.theme = 'dark'
+  
+  // Whenever the user explicitly chooses to respect the OS preference
+  localStorage.removeItem('theme')
+  console.log("Creando un script para cambiar el theme :D")
+  </script>
 </html>
 
 <style is:global>
@@ -63,7 +82,7 @@ const { title } = Astro.props;
 		);
 	}
   
-	html {
+	/* html {
 		font-family: 'Inter' ,system-ui, sans-serif;
 		background: #13151a;
 		background-size: 224px;
@@ -78,5 +97,5 @@ const { title } = Astro.props;
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
-	}
+	} */
 </style>

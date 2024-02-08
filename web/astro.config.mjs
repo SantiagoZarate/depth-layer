@@ -9,7 +9,10 @@ import MDXCodeBlocks, { mdxCodeBlockAutoImport } from 'astro-mdx-code-blocks'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react(), AutoImport({
+  integrations: [tailwind({
+    // configFile: './tailwind.config.ts',
+    applyBaseStyles: true
+  }), react(), AutoImport({
     imports: [
       mdxCodeBlockAutoImport('src/components/CodeSnippet.astro')
     ]
