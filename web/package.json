@@ -20,6 +20,7 @@
     "astro": "^4.3.3",
     "astro-auto-import": "^0.4.2",
     "astro-mdx-code-blocks": "0.0.6",
+    "class-variance-authority": "0.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rehype-pretty-code": "^0.12.6",
