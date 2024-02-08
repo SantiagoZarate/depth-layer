@@ -2,39 +2,54 @@
 import { Prism } from '@astrojs/prism';
 
 const {
-    code,
     lang,
-    filename,
 } = Astro.props;
 
-const hasLang = !!lang;
-const hasFileName = !!filename;
-
-const showHeader = hasLang || hasFileName;
 ---
-
-<figure class="code-block">
-    {showHeader && (
-        <figcaption class="header">
-            {hasFileName && (
-                <span class="filename">
-                    {filename}
-                </span>
-            )}
-            {hasLang && (
-                <span class="lang">
-                    {lang}
-                </span>
-            )}
-        </figcaption>
-    )}
+<div class=`
+relative [&>span]:block rounded-xl overflow-hidden
+  before:absolute before:rounded-[inherit] before:pointer-events-none before:inset-0 before:border-b 
+  after:absolute after:rounded-[inherit] after:pointer-events-none after:border-t after:inset-0 shadow
+  before:border-black/40 after:border-white/50
+  before:opacity-60 after:opacity-60
+  before:border-l after:border-r drop-shadow-[-4px_4px_2px_rgba(0,0,0,0.15)]
+  before:bg-[linear-gradient(225deg,rgba(255,255,255,0.15)_15%,rgba(0,0,0,0.25)_80%)]
+`>
+<figure class="code-block my-0 mx-auto">
+  <figcaption class="header">
+    <span class="filename">
+        ./DepthLayer.tsx
+    </span>
+    <span class="lang">
+        .tsx
+    </span>
+  </figcaption>
 
     <Prism
-        code={code}
-        lang={lang}
+    lang={lang}
+    code=`
+...
+variants: {
+  variant: {
+    default: 'before:border-black/40 after:border-white/50',
+    inner: 'before:border-[hsl(0deg,0%,85%)]'
+  },
+  light: {
+    radial: 'before:bg-[...]',
+    linear: 'before:bg-[...]',
+    none: ''
+  },
+  lightDirection: {
+    top: 'drop-shadow-[0px_4px_2px_rgba(0,0,0,0.15)]',
+    topLeft: 'before:border-r after:border-l ',
+    topRight: 'before:border-l after:border-r '
+  }
+...
+**not the actual code**
+        `
     />
-
 </figure>
+</div>
 <style is:inline>
 figcaption {
   display: flex;
