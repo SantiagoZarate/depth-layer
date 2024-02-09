@@ -6,6 +6,7 @@ import Header from '../common/header/index.astro'
 import Hero from '../components/Hero.astro';
 import CodeSnippet from '../components/CodeSnippet.astro';
 import { DepthLayer } from '../components/DepthLayer';
+import { SnippetCodeVariants } from '../components/snippetCodeVariants'
 ---
 
 <Layout title="Welcome to Astro.">
@@ -26,6 +27,7 @@ import { DepthLayer } from '../components/DepthLayer';
           <h4 class="text-text-active text-2xl capitalize">integration with CVA</h4>
           <p class="text-text-off">Experience seamless integration with <span class="text-blue-400">TypeScript IntelliSense</span> as you wield the power of Class Variance Authority to effortlessly transform your component's appearance based on variants.</p>
         </div>
+          <SnippetCodeVariants client:visible/>
           <DepthLayer lightDirection={'topRight'} opacity={'low'}>
             <img draggable="false" src="./images/snippet.png" alt="">
           </DepthLayer>
