@@ -19,6 +19,7 @@ export function SnippetCodeVariants() {
           {
             variants.map((variant, index) => (
               <li
+                key={index}
                 onClick={() => handleChangeVariant(index)}
                 className={`${variant === currentVariant ? "bg-blue-600/40" : "hover:bg-white/10"} font-mono tracking-wide cursor-pointer  px-1 py-[2px] flex justify-between items-center `}>
                 <div className="flex gap-2 items-center">
@@ -37,7 +38,7 @@ export function SnippetCodeVariants() {
         </ul>
         <div className="flex flex-col text-white/50 font-mono">
           <div>
-            &lt;<span className="text-emerald-500">DepthLayer</span><span className="text-blue-300"> lightDirection=&#123;''&#125; </span>/&gt;
+            &lt;<span className="text-emerald-500">DepthLayer</span><span className="text-blue-300"> lightDirection</span>=<span className="text-blue-500">&#123;</span><span className="text-orange-500">''</span><span className="text-blue-500">&#125;</span> /&gt;
           </div>
           <div className="mx-4">
             &lt;<span className="text-blue-500">button</span>&gt;<span className="text-white/80">Press me!</span>&lt;/<span className="text-blue-500">button</span>&gt;

@@ -1,10 +1,11 @@
 ---
 interface Props {
-  ref : string
+  ref : string,
+  id? : string
 }
-const { ref } = Astro.props
+const { ref, id } = Astro.props
 ---
 
-<a class="border p-1 border-border hover:border-white/50 duration-150 transition rounded-md cursor-pointer" href={ref}>
+<a id={id} class="border p-1 border-border hover:border-white/50 duration-150 transition rounded-md cursor-pointer" href={ref}>
   <slot />
 </a>
