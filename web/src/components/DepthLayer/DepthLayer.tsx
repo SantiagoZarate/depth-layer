@@ -1,8 +1,8 @@
 import { cva, type VariantProps } from "class-variance-authority"
-import React, { type PropsWithChildren } from "react"
+import  { type PropsWithChildren } from "react"
 
 export const depthLayerStyles = cva(
-  `relative [&>span]:block [&>*]:rounded-[inherit]
+  `[&:has(relative)]:static [&>span]:block [&>*]:rounded-[inherit]
   before:absolute before:rounded-[inherit] before:pointer-events-none before:inset-0 before:border-b 
   after:absolute after:rounded-[inherit] after:pointer-events-none after:border-t after:inset-0 shadow`,
   {

@@ -9,7 +9,16 @@ export default {
         text: {
           active: "hsl(var(--text)/<alpha-value>)",
           off: "hsl(var(--text-light)/<alpha-value>)",
-          accent :"hsl(var(--accent)/<alpha-value>)"
+          accent: "hsl(var(--accent)/<alpha-value>)"
+        }
+      },
+      animation: {
+        levitate: 'levitate 3s ease-in-out infinite'
+      },
+      keyframes: {
+        levitate: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-10px)' }
         }
       }
     },

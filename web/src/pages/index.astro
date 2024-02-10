@@ -27,10 +27,7 @@ import { SnippetCodeVariants } from '../components/snippetCodeVariants'
           <h4 class="text-text-active text-2xl capitalize">integration with CVA</h4>
           <p class="text-text-off">Experience seamless integration with <span class="text-blue-400">TypeScript IntelliSense</span> as you wield the power of Class Variance Authority to effortlessly transform your component's appearance based on variants.</p>
         </div>
-          <SnippetCodeVariants client:visible/>
-          <DepthLayer lightDirection={'topRight'} opacity={'low'}>
-            <img draggable="false" src="./images/snippet.png" alt="">
-          </DepthLayer>
+        <SnippetCodeVariants client:load/>
       </div>
     </section>
   </section>
@@ -40,4 +37,4 @@ import { SnippetCodeVariants } from '../components/snippetCodeVariants'
       asdsahdsad
     </section>
   </section>
-</Layout>../components/DepthLayer/DepthLayer
+</Layout>
