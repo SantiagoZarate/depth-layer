@@ -19,7 +19,7 @@ export const depthLayerStyles = cva(
       },
       light: {
         radial: 'before:bg-[radial-gradient(ellipse_at_50%_-150%,_var(--tw-gradient-stops))] before:from-white before:via-white/25 before:to-[rgba(0,0,0,0.25)]',
-        linear: 'before:bg-[linear-gradient(rgba(255,255,255,0.15),rgba(0,0,0,0.15))]',
+        linear: '',
         none: ''
       },
       lightDirection: {
@@ -53,6 +53,11 @@ export const depthLayerStyles = cva(
         variant: 'inner',
         light: ['linear', 'radial'],
         className: 'before:bg-[linear-gradient(rgba(255,255,255,0),rgba(0,0,0,0))]'
+      },
+      {
+        light: 'linear',
+        lightDirection: 'top',
+        className: 'before:bg-[linear-gradient(rgba(255,255,255,0.15),rgba(0,0,0,0.15))]'
       },
       {
         light: 'linear',
