@@ -1,5 +1,6 @@
 import { cva, VariantProps } from "class-variance-authority"
 import { PropsWithChildren } from "react"
+import { cn } from "../../lib/util"
 
 export const depthLayerStyles = cva(
   `relative [&>span]:block [&>*]:rounded-[inherit]
@@ -55,9 +56,9 @@ export const depthLayerStyles = cva(
         className: 'before:bg-[linear-gradient(rgba(255,255,255,0),rgba(0,0,0,0))]'
       },
       {
-        light : 'linear',
-        lightDirection : 'top',
-        className : 'before:bg-[linear-gradient(rgba(255,255,255,0.15),rgba(0,0,0,0.15))]'
+        light: 'linear',
+        lightDirection: 'top',
+        className: 'before:bg-[linear-gradient(rgba(255,255,255,0.15),rgba(0,0,0,0.15))]'
       },
       {
         light: 'linear',
@@ -98,7 +99,7 @@ export type DepthLayerProps = PropsWithChildren & VariantProps<typeof depthLayer
 export function DepthLayer({ variant, children, round, elevation, hoverable, lightDirection, light, opacity, clickable, ...args }: DepthLayerProps) {
   return (
     <span
-      className={`${depthLayerStyles({ round, elevation, variant, hoverable, lightDirection, light, opacity, clickable })}`} {...args}>
+      className={cn(depthLayerStyles({ round, elevation, variant, hoverable, lightDirection, light, opacity, clickable }))} {...args}>
       {children}
     </span>
   )
