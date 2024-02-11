@@ -15,9 +15,10 @@
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true,
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
   },
   "exclude": [
-    "src/stories/"
+    "src/stories/",
+    "web/"
   ]
 }

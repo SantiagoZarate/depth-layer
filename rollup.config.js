@@ -26,10 +26,9 @@ export default [
     plugins: [
       // NEW
       typescript({
-        exclude: ["src/stories/"]
+        exclude: ["src/stories/", "web/"]
       }),
       peerDepsExternal(),
-
       resolve(),
       commonjs(),
       css(),
