@@ -4,6 +4,14 @@
   "version": "0.0.12",
   "type": "module",
   "description": "react component to add depth looking style to your own components",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/ui-react.es.js",
+      "require": "./dist/ui-react.umd.js",
+      "styles": "./dist/style.css"
+    }
+  },
   "main": "dist/depth-decorator.js",
   "source": "src/index.tsx",
   "types": "dist/index.d.ts",
