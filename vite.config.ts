@@ -29,7 +29,6 @@ export default defineConfig({
       entry: path.resolve(__dirname, "./src/index.tsx"),
       name: "DepthDecorator",
       fileName: "depth-decorator",
-      formats: ['es']
     },
     rollupOptions: {
       external: ["react", "react-dom", "tailwindcss"],
