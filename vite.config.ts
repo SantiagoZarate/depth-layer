@@ -4,14 +4,14 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
-import rollupTs from 'rollup-plugin-typescript2'
-import tailwindcss from 'tailwindcss'
+import tailwindcss from "tailwindcss";
+// import rollupTs from 'rollup-plugin-typescript2'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   test: {
-    environment: 'happy-dom',
-    include: ['./src/components/**/*.test.@(js|jsx|ts|tsx)']
+    environment: "happy-dom",
+    include: ["./src/components/**/*.test.@(js|jsx|ts|tsx)"],
   },
   resolve: {
     alias: {
@@ -36,7 +36,7 @@ export default defineConfig({
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
-          tailwindcss: "tailwindcss"
+          tailwindcss: "tailwindcss",
         },
       },
     },
