@@ -4,6 +4,7 @@ import { DepthLayer } from './index'
 
 type DepthDecoratorTest = {
   depthLayer: HTMLElement
+  styles: string
 }
 
 describe('testing DepthLayer component', () => {
@@ -15,6 +16,7 @@ describe('testing DepthLayer component', () => {
     )
     screen.debug()
     context.depthLayer = screen.getByRole('depth-decorator')
+    context.styles = screen.getByRole('depth-decorator').getAttribute('class') ?? ''
   })
 
   afterEach(() => {
@@ -25,13 +27,16 @@ describe('testing DepthLayer component', () => {
     expect(depthLayer).toBeDefined()
   })
 
-  it<DepthDecoratorTest>('style has to match', ({ depthLayer }) => {
-    const styles = depthLayer.getAttribute('class')
+  it<DepthDecoratorTest>('shouldnt containt hoverable styles', ({ styles }) => {
+    expect(styles).not.toContain('hover:-translate-y-[2px] hover:shadow-2xl hover:brightness-95 duration-200 transition-all')
+  })
+
+  it<DepthDecoratorTest>('style has to match', ({ styles }) => {
     expect(styles).toMatch(`relative [&>span]:block [&>*]:rounded-[inherit] before:absolute before:rounded-[inherit] before:pointer-events-none before:inset-0 before:border-b after:absolute after:rounded-[inherit] after:pointer-events-none after:border-t after:inset-0 shadow before:border-black/40 after:border-white/50 drop-shadow-[0px_4px_2px_rgba(0,0,0,0.15)] before:opacity-100 after:opacity-100 rounded-lg overflow-hidden before:bg-[linear-gradient(rgba(255,255,255,0.15),rgba(0,0,0,0.15))]`)
   })
 })
 
-describe('testing DepthLayer component', () => {
+describe('testing DepthLayer component with hoverable variance', () => {
   it('shoul apply certain styles based on the variances', () => {
     render(
       <DepthLayer hoverable>
