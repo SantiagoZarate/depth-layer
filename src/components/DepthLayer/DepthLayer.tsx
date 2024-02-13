@@ -99,6 +99,7 @@ export type DepthLayerProps = PropsWithChildren & VariantProps<typeof depthLayer
 export function DepthLayer({ variant, children, round, elevation, hoverable, lightDirection, light, opacity, clickable, ...args }: DepthLayerProps) {
   return (
     <span
+      role="depth-decorator"
       className={cn(depthLayerStyles({ round, elevation, variant, hoverable, lightDirection, light, opacity, clickable }))} {...args}>
       {children}
     </span>
