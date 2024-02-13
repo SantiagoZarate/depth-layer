@@ -1,10 +1,11 @@
 import type { Meta, StoryFn, StoryObj } from '@storybook/react';
 import React from 'react';
 
-import { DepthLayer } from './index';
+import { DepthLayer } from './DepthLayer';
 
 const meta = {
-  title: 'myComponents/DepthLayer',
+  id : 'depthlayer-default--docs',
+  title: 'DepthLayer',
   component: DepthLayer,
   parameters: {
     layout: 'centered',

@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import react from "@vitejs/plugin-react";
 import path from "path";
 import { defineConfig } from "vite";
@@ -7,6 +9,10 @@ import tailwindcss from 'tailwindcss'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  test: {
+    environment: 'happy-dom',
+    include: ['./src/components/**/*.test.@(js|jsx|ts|tsx)']
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -38,16 +44,17 @@ export default defineConfig({
   plugins: [
     react(),
     dts({ rollupTypes: true }),
-    {
-      ...rollupTs({
-        check: true,
-        tsconfig: './tsconfig.json',
-        tsconfigOverride: {
-          noEmits: true,
-        },
-      }),
-      // run before build
-      enforce: 'pre',
-    },
+    // Fijarse si build funciona sin este plugin
+    // {
+    //   ...rollupTs({
+    //     check: true,
+    //     tsconfig: './tsconfig.json',
+    //     // tsconfigOverride: {
+    //     //   noEmits: true,
+    //     // },
+    //   }),
+    //   // run before build
+    //   enforce: 'pre',
+    // },
   ],
 });
