@@ -29,6 +29,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, "./src/index.tsx"),
       name: "DepthDecorator",
       fileName: "depth-decorator",
+      formats: ['es']
     },
     rollupOptions: {
       external: ["react", "react-dom", "tailwindcss"],
@@ -44,7 +45,7 @@ export default defineConfig({
   plugins: [
     react(),
     dts({ rollupTypes: true }),
-    // Fijarse si build funciona sin este plugin
+    // Fijarse si build funciona sin este plugin -- conflictos al hacer test con vitest
     // {
     //   ...rollupTs({
     //     check: true,
