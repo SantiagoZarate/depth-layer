@@ -5,7 +5,7 @@ import path from "path";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 import tailwindcss from "tailwindcss";
-import rollupTs from 'rollup-plugin-typescript2'
+import rollupTs from "rollup-plugin-typescript2";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -48,13 +48,13 @@ export default defineConfig({
     {
       ...rollupTs({
         check: true,
-        tsconfig: './tsconfig.json',
-        // tsconfigOverride: {
-        //   noEmits: true,
-        // },
+        tsconfig: "./tsconfig.json",
+        tsconfigOverride: {
+          noEmits: true,
+        },
       }),
       // run before build
-      enforce: 'pre',
+      enforce: "pre",
     },
   ],
 });
