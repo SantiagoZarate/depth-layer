@@ -1,5 +1,5 @@
 import { cva, VariantProps } from "class-variance-authority"
-import { PropsWithChildren } from "react"
+import { ComponentProps, PropsWithChildren } from "react"
 import { cn } from "../../lib/util"
 
 export const depthLayerStyles = cva(
@@ -89,18 +89,18 @@ export const depthLayerStyles = cva(
       hoverable: false,
       clickable: false,
       lightDirection: 'top',
-      opacity: 'full'
+      opacity: 'full',
     },
   }
 )
 
-export type DepthLayerProps = PropsWithChildren & VariantProps<typeof depthLayerStyles>
+export type DepthLayerProps = PropsWithChildren & VariantProps<typeof depthLayerStyles> & Pick<ComponentProps<'span'>, 'className'>
 
-export function DepthLayer({ variant, children, round, elevation, hoverable, lightDirection, light, opacity, clickable, ...args }: DepthLayerProps) {
+export function DepthLayer({ variant, children, round, elevation, hoverable, lightDirection, light, opacity, clickable, className, ...args }: DepthLayerProps) {
   return (
     <span
       role="depth-decorator"
-      className={cn(depthLayerStyles({ round, elevation, variant, hoverable, lightDirection, light, opacity, clickable }))} {...args}>
+      className={cn(depthLayerStyles({ round, elevation, variant, hoverable, lightDirection, light, opacity, clickable, className }))} {...args}>
       {children}
     </span>
   )

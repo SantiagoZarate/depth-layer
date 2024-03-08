@@ -4,7 +4,7 @@ import React from 'react';
 import { DepthLayer } from './DepthLayer';
 
 const meta = {
-  id : 'depthlayer-default--docs',
+  id: 'depthlayer-default--docs',
   title: 'DepthLayer',
   component: DepthLayer,
   parameters: {

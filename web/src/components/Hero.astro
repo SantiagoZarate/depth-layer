@@ -3,9 +3,10 @@ import RigthArrowIcon from './icons/RigthArrowIcon.astro';
 import GithubIcon from './icons/GithubIcon.astro';
 import TerminalIcon from './icons/TerminalIcon.astro'
 import ButtonLink from './ButtonLink.astro';
+import { HeroRightSide } from './HeroRightSide';
 ---
-<section class="p-8 mx-auto relative grid grid-cols-2 items-center max-w-screen-xl min-h-screen">
-  <article class="flex flex-col gap-4">
+<section class="p-8 mx-auto relative flex items-center max-w-screen-xl min-h-screen">
+  <article class="flex-1 flex flex-col gap-4">
     <h2 class="text-4xl font-black text-pretty">Enhance your component's aesthetics effortlessly with our
       <span class="bg-gradient-to-r  from-blue-600 via-teal-200 to-indigo-400 text-transparent bg-clip-text">React Depth Decorator</span>
     </h2>
@@ -24,7 +25,5 @@ import ButtonLink from './ButtonLink.astro';
       </span>
     </footer>
   </article>
-  <article>
-
-  </article>
+  <HeroRightSide client:load/>
 </section>

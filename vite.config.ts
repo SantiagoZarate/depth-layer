@@ -5,7 +5,7 @@ import path from "path";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 import tailwindcss from "tailwindcss";
-import rollupTs from "rollup-plugin-typescript2";
+// import rollupTs from "rollup-plugin-typescript2";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -45,16 +45,17 @@ export default defineConfig({
     react(),
     dts({ rollupTypes: true }),
     // Fijarse si build funciona sin este plugin -- conflictos al hacer test con vitest
-    {
-      ...rollupTs({
-        check: true,
-        tsconfig: "./tsconfig.json",
-        tsconfigOverride: {
-          noEmits: true,
-        },
-      }),
-      // run before build
-      enforce: "pre",
-    },
+    // Este plugin tambien tiene conflicto con storybook
+    // {
+    //   ...rollupTs({
+    //     check: true,
+    //     tsconfig: "./tsconfig.json",
+    //     tsconfigOverride: {
+    //       noEmits: true,
+    //     },
+    //   }),
+    //   // run before build
+    //   enforce: "pre",
+    // },
   ],
 });
