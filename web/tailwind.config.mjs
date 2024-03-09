@@ -11,6 +11,7 @@ export default {
           active: "hsl(var(--text)/<alpha-value>)",
           off: "hsl(var(--text-light)/<alpha-value>)",
           accent: "hsl(var(--accent)/<alpha-value>)",
+          secondary: "hsl(var(--secondary)/<alpha-value>)",
         },
       },
       animation: {

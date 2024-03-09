@@ -6,6 +6,7 @@ export function FakeNftCard() {
         <p className="text-green-300 text-end">$12.67 USD</p>
       </span>
       <img
+        draggable={false}
         className="w-full h-full object-cover"
         src="https://i.seadn.io/gcs/files/3085b3fc65f00b28699b43efb4434eec.png?auto=format&dpr=1&w=1000"
         alt=""

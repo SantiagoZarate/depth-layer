@@ -5,10 +5,11 @@ export function FakeUI() {
   return (
     <div className="min-w-[260px] bg-stone-800 rounded-lg min-h-1/3 flex flex-col gap-2 divide-y divide-border">
       <header className="flex items-center gap-4 px-4 py-3">
-        <picture className="w-12 h-12 overflow-hidden rounded-full">
+        <picture className="w-12 h-12 overflow-hidden rounded-full border-2 border-border">
           <img
+            draggable={false}
             className="object-cover w-full h-full"
-            src="https://cdn.pfps.gg/pfps/1766-silly-cat.png"
+            src="https://i.pinimg.com/736x/85/9a/f7/859af748d1eed0d67d5801a6df188a89.jpg"
             alt=""
           />
         </picture>
