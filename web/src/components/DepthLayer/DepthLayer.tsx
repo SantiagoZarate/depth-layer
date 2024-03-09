@@ -36,6 +36,7 @@ export const depthLayerStyles = cva(
         full: "before:opacity-100 after:opacity-100",
         medium: "before:opacity-60 after:opacity-60",
         low: "before:opacity-30 after:opacity-30",
+        none: "before:opacity-0 after:opacity-0",
       },
       round: {
         full: "rounded-lg overflow-hidden",

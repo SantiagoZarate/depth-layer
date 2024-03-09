@@ -1,13 +1,14 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { BooleanSlide } from "./BooleanSlider";
 import { DepthLayer } from "./DepthLayer";
 import { FakeUI } from "./FakeUI";
 import { lightDirectionOptions, opacityOptions } from "../constants";
 import { CheckIcon } from "./icons/CheckIcon";
 import { UserAdd } from "./icons/UserAdd";
+import { StarsIcon } from "./icons/StarsIcon";
 
 type LightDirectionType = "top" | "topLeft" | "topRight";
-type OpacityType = "full" | "medium" | "low";
+type OpacityType = "full" | "medium" | "low" | "none";
 
 type Settings = {
   hoverable: boolean;
@@ -21,10 +22,19 @@ const initSettings: Settings = {
   opacity: "medium",
 };
 
+const noStyles: Settings = {
+  hoverable: false,
+  lightDirection: "top",
+  opacity: "none",
+};
+
 export function HeroRightSide() {
+  const defaultSettings = useRef<Settings>(initSettings);
   const [depthSettings, setDepthSettings] = useState<Settings>(initSettings);
+  const [applyStyles, setApplyStykes] = useState(true);
 
   const updateOpacity = (type: OpacityType) => {
+    if (!applyStyles) return;
     const newSettings = {
       ...depthSettings,
       opacity: type,
@@ -33,6 +43,7 @@ export function HeroRightSide() {
   };
 
   const toggleHoverable = () => {
+    if (!applyStyles) return;
     setDepthSettings((prevState) => {
       return {
         ...prevState,
@@ -42,11 +53,17 @@ export function HeroRightSide() {
   };
 
   const updateLightDirection = (value: LightDirectionType) => {
+    if (!applyStyles) return;
     const newSettings = {
       ...depthSettings,
       lightDirection: value,
     };
     setDepthSettings(newSettings);
+  };
+
+  const handleTurnOffStyles = () => {
+    setDepthSettings(applyStyles ? noStyles : defaultSettings.current);
+    setApplyStykes(!applyStyles);
   };
 
   return (
@@ -126,6 +143,15 @@ export function HeroRightSide() {
           ))}
         </ul>
       </div>
+      <button
+        onClick={handleTurnOffStyles}
+        className={`absolute -bottom-1/2 right-12 flex gap-2 items-center backdrop-blur-sm rounded-2xl overflow-hidden duration-150 transition-opacity ${
+          !applyStyles && "opacity-50"
+        }`}
+      >
+        {applyStyles ? "Turn on styles" : "Turn off styles"}
+        <StarsIcon />
+      </button>
     </article>
   );
 }

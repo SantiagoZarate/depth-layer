@@ -19,12 +19,12 @@ export function FakeUI() {
           </p>
           <div className="flex gap-2 items-center">
             <span className="w-2 h-2 rounded-full bg-green-700" />
-            <p className="text-xs capitalize">available</p>
+            <p className="text-xs capitalize text-text-accent">available</p>
           </div>
         </div>
       </header>
       <div>
-        <p className="text-xs px-2 py-1 capitalize border-b border-border tracking-wider">
+        <p className="text-xs px-2 py-1 capitalize border-b border-border tracking-wider text-text-active">
           previous activity
         </p>
         <ul>
