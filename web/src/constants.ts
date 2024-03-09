@@ -1,3 +1,5 @@
+import type { Settings } from "./types";
+
 export const lightDirectionOptions = [
   {
     text: "top",
@@ -42,3 +44,15 @@ export const companies = [
     years: 2,
   },
 ];
+
+export const initSettings: Settings = {
+  hoverable: true,
+  lightDirection: "top",
+  opacity: "medium",
+};
+
+export const noStyles: Settings = {
+  hoverable: false,
+  lightDirection: "top",
+  opacity: "none",
+};

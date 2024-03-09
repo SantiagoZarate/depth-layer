@@ -1,5 +1,5 @@
-import { companies } from "../constants";
-import { HeartIcon } from "./icons/HeartIcon";
+import { companies } from "../../constants";
+import { HeartIcon } from "../icons/HeartIcon";
 
 export function FakeUI() {
   return (
