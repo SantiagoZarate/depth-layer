@@ -11,6 +11,7 @@
     --text: 20deg 5% 90%;
     --text-light: 24deg 5% 63%;
     --accent: 60deg 9% 97%;
+    --widget: 225 20% 4%;
   }
 
   :root[data-theme="dark"] {
@@ -20,22 +21,16 @@
     --text: 12deg 6% 15%;
     --text-light: 33deg 5% 32%;
     --accent: 60deg 9% 97%;
+    --widget: 225 20% 4%;
   }
 }
 
 html {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   background-size: 224px;
 }
 
 code {
-  font-family:
-    Menlo,
-    Monaco,
-    Lucida Console,
-    Liberation Mono,
-    DejaVu Sans Mono,
-    Bitstream Vera Sans Mono,
-    Courier New,
-    monospace;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
 }

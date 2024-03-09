@@ -1,23 +1,9 @@
+import { companies } from "../constants";
 import { HeartIcon } from "./icons/HeartIcon";
-
-const companies = [
-  {
-    name: "Facebook",
-    years: 3,
-  },
-  {
-    name: "Amazon",
-    years: 2,
-  },
-  {
-    name: "Apple",
-    years: 2,
-  },
-];
 
 export function FakeUI() {
   return (
-    <div className="min-w-[260px] bg-stone-900 rounded-lg min-h-1/3 flex flex-col gap-2 divide-y divide-border">
+    <div className="min-w-[260px] bg-stone-800 rounded-lg min-h-1/3 flex flex-col gap-2 divide-y divide-border">
       <header className="flex items-center gap-4 px-4 py-3">
         <picture className="w-12 h-12 overflow-hidden rounded-full">
           <img

@@ -27,3 +27,18 @@ export const opacityOptions = [
     value: "low",
   },
 ];
+
+export const companies = [
+  {
+    name: "Facebook",
+    years: 3,
+  },
+  {
+    name: "Amazon",
+    years: 2,
+  },
+  {
+    name: "Apple",
+    years: 2,
+  },
+];

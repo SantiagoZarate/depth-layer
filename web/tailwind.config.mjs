@@ -6,6 +6,7 @@ export default {
       colors: {
         border: "hsl(var(--border)/<alpha-value>)",
         background: "hsl(var(--background)/<alpha-value>)",
+        widget: "hsl(var(--widget)/<alpha-value>)",
         text: {
           active: "hsl(var(--text)/<alpha-value>)",
           off: "hsl(var(--text-light)/<alpha-value>)",
