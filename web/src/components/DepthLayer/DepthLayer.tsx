@@ -65,13 +65,13 @@ export const depthLayerStyles = cva(
         light: "linear",
         lightDirection: "top",
         className:
-          "before:bg-[linear-gradient(rgba(255,255,255,0.15),rgba(0,0,0,0.15))]",
+          "before:bg-[linear-gradient(rgba(255,255,255,0.15),rgba(0,0,0,0.35))]",
       },
       {
         light: "linear",
         lightDirection: "topLeft",
         className:
-          "before:bg-[linear-gradient(135deg,rgba(255,255,255,0.15)_15%,rgba(0,0,0,0.25)_80%)]",
+          "before:bg-[linear-gradient(135deg,rgba(255,255,255,0.15)_15%,rgba(0,0,0,0.15)_80%)]",
       },
       {
         light: "linear",

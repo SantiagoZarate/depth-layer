@@ -46,11 +46,11 @@ export function HeroRightSide() {
       />
       <button
         onClick={handleTurnOffStyles}
-        className={`absolute -bottom-1/2 right-12 flex gap-2 items-center backdrop-blur-sm rounded-2xl overflow-hidden duration-150 transition-opacity ${
+        className={`absolute -bottom-1/2 right-12 flex gap-2 items-center backdrop-blur-sm rounded-2xl overflow-hidden duration-150 transition-all hover:scale-[1.03] ${
           !applyStyles && "opacity-50"
         }`}
       >
-        {applyStyles ? "Turn on styles" : "Turn off styles"}
+        {applyStyles ? "Turn off styles" : "Turn on styles"}
         <StarsIcon />
       </button>
     </article>
