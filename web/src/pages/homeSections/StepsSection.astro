@@ -1,9 +1,20 @@
 ---
-import { stepOneCode, stepThreeCode, stepTwoCode, steps } from "../../constants";
+import { steps } from "../../constants";
 import CodeSnippet from "../../components/CodeSnippet.astro";
+import SettingsIcon from "../../components/icons/SettingsIcon.astro";
 ---
 
-<section class="border-b borde-border w-full min-h-screen py-20 flex items-center text-text-active">
+<section class="border-b borde-border w-full min-h-screen py-20 flex flex-col gap-6 items-center text-text-active">
+  <header class="flex flex-col gap-4 w-full max-w-screen-md border-b border-border pb-6">
+    <div>
+      <h2 class="text-text-active text-2xl font-bold flex gap-2 text-center"><SettingsIcon /> Instalation</h2>
+      <p class="text-text-secondary">Before install Depth Decorator make sure you are working with:</p>
+    </div>
+    <ul class="flex gap-2">
+      <li class="px-4 py-2 text-xs bg-teal-100 text-teal-500 font-bold w-fit rounded-full">React v18+</li>
+      <li class="px-4 py-2 text-xs bg-teal-100 text-teal-500 font-bold w-fit rounded-full">Tailwind v3.4+</li>
+    </ul>
+  </header>
   <section class="flex flex-col gap-12 items-center mx-auto border-l border-border justify-center max-w-screen-md">
     {
       steps.map((step, index) => (
@@ -13,7 +24,7 @@ import CodeSnippet from "../../components/CodeSnippet.astro";
             <h2 class="font-bold text-lg capitalize">{step.title}</h2>  
           </header>
           <p class="text-text-secondary">{step.description}</p>
-          <CodeSnippet lang={step.codeLang} code={step.code} filename={step.filename} fileExtension="pnpm"/>
+          <CodeSnippet lang={step.codeLang} code={step.code} filename={step.filename} fileExtension={step.codeLang}/>
         </article>
       ))
     }

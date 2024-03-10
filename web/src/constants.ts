@@ -79,7 +79,7 @@ export const depthLayerStyles = cva(
 ...
 **not the actual code**`;
 
-export const stepOneCode = `pnpm add depth-decorator`;
+export const stepOneCode = `npm i depth-decorator`;
 
 export const stepTwoCode = `export default {
   content: [
@@ -102,7 +102,8 @@ export const steps = [
   {
     code: stepOneCode,
     title: "install package",
-    description: "something here",
+    description:
+      "To incorporate DepthDecorator into your project, simply download the library from the npm registry using the command",
     codeLang: "npm",
     filename: "terminal",
   },
@@ -111,7 +112,7 @@ export const steps = [
     title: "tailwind configuration",
     description:
       "Prior to utilizing DepthDecorator, ensure that you have Tailwind CSS installed. Follow the official installation guide for Tailwind CSS. Additionally, integrate the following code into your tailwind.config.(js,ts,mjs) file:",
-    codeLang: "js",
+    codeLang: "ts",
     filename: "tailwind.config.ts",
   },
   {
