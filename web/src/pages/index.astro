@@ -1,36 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-import Blob from '../components/Blob.astro'
 import Header from '../common/header/index.astro'
-import Hero from '../components/Hero.astro';
-import Steps from '../components/Steps.astro';
-import CodeSnippet from '../components/CodeSnippet.astro';
-import { SnippetCodeVariants } from '../components/snippetCodeVariants'
-import { cvaExampleCode } from '../constants';
+import HeroSection from './homeSections/HeroSection.astro';
+import StepsSection from './homeSections/StepsSection.astro';
+import IntegrationSection from './homeSections/IntegrationSection.astro';
 ---
 
 <Layout title="Welcome to Astro.">
   <Header />
-  <div class="absolute text-teal-100  left-0 h-1/2 w-1/2 blur-[200px] opacity-50 pointer-events-none">
-    <Blob />
-  </div>
-	<main class="w-full border-b border-border">
-		<Hero />
-	</main>
-  <section class="border-b w-full bg-gradient-to-t from-teal-100/20 to-transparent to-65% border-border">
-    <section class="px-0 p-8 grid grid-cols-2  max-w-screen-xl mx-auto min-h-screen">
-      <div class="p-4 flex items-center justify-center">
-        <CodeSnippet lang="js" code={cvaExampleCode}  />
-      </div>
-      <div class="p-4 flex flex-col justify-center gap-8 ">
-        <div class="flex flex-col gap-4">
-          <h4 class="text-text-active text-2xl capitalize">integration with CVA</h4>
-          <p class="text-text-off">Experience seamless integration with <span class="text-blue-400">TypeScript IntelliSense</span> as you wield the power of Class Variance Authority to effortlessly transform your component's appearance based on variants.</p>
-        </div>
-        <SnippetCodeVariants client:load/>
-      </div>
-    </section>
-  </section>
-  <Steps />
+  <HeroSection />
+  <IntegrationSection />
+  <StepsSection />
 </Layout>
