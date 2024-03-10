@@ -39,7 +39,7 @@ export const depthLayerStyles = cva(
         none: "before:opacity-0 after:opacity-0",
       },
       round: {
-        full: "rounded-lg overflow-hidden",
+        full: "rounded-lg",
         none: "",
       },
       hoverable: {

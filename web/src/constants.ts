@@ -89,11 +89,13 @@ export const stepTwoCode = `export default {
   ...
 };`;
 
-export const stepThreeCode = `export function App(){
+export const stepThreeCode = `import { DepthDecorator } from 'depth-decorator'
+
+export function App(){
   return(
-    <DepthLayer>
+    <DepthDecorator>
       <AwesomePieceOfUI />
-    </DepthLayer>
+    </DepthDecorator>
   )
 }
 `;
@@ -103,7 +105,7 @@ export const steps = [
     code: stepOneCode,
     title: "install package",
     description:
-      "To incorporate DepthDecorator into your project, simply download the library from the npm registry using the command",
+      "To incorporate DepthDecorator into your project, simply download the library from the npm registry using the command:",
     codeLang: "npm",
     filename: "terminal",
   },
@@ -118,7 +120,7 @@ export const steps = [
   {
     code: stepThreeCode,
     title: "ready to go!",
-    description: "now our DepthDecorator is ready to use!",
+    description: "Now our DepthDecorator component is ready to use!",
     codeLang: "tsx",
     filename: "App.tsx",
   },
