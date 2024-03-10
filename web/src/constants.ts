@@ -56,3 +56,69 @@ export const noStyles: Settings = {
   lightDirection: "top",
   opacity: "none",
 };
+
+export const cvaExampleCode = `import { cva } from 'class-variance-authority'
+
+export const depthLayerStyles = cva(
+  {
+    variants: {
+      variant: {
+        default: "before:border-black/40 after:border-white/50",
+        inner: "before:border-[hsl(0deg,0%,85%)]",
+      },
+      elevation: {
+        high: "drop-shadow-2xl",
+        medium: "drop-shadow-lg",
+        flat: "drop-shadow",
+      },
+      lightDirection: {
+        top: "drop-shadow-[...]",
+        topLeft:"drop-shadow-[...]",
+        topRight:"drop-shadow-[...]",
+      },
+...
+**not the actual code**`;
+
+export const stepOneCode = `pnpm add depth-decorator`;
+
+export const stepTwoCode = `export default {
+  content: [
+    "src/**/*.{js,jsx,ts,tsx}",
+    "node_modules/depth-decorator/dist/**/*.{js,ts,jsx,tsx}",
+  ],
+  ...
+};`;
+
+export const stepThreeCode = `export function App(){
+  return(
+    <DepthLayer>
+      <AwesomePieceOfUI />
+    </DepthLayer>
+  )
+}
+`;
+
+export const steps = [
+  {
+    code: stepOneCode,
+    title: "install package",
+    description: "something here",
+    codeLang: "npm",
+    filename: "terminal",
+  },
+  {
+    code: stepTwoCode,
+    title: "tailwind configuration",
+    description:
+      "Prior to utilizing DepthDecorator, ensure that you have Tailwind CSS installed. Follow the official installation guide for Tailwind CSS. Additionally, integrate the following code into your tailwind.config.(js,ts,mjs) file:",
+    codeLang: "js",
+    filename: "tailwind.config.ts",
+  },
+  {
+    code: stepThreeCode,
+    title: "ready to go!",
+    description: "now our DepthDecorator is ready to use!",
+    codeLang: "tsx",
+    filename: "App.tsx",
+  },
+];
